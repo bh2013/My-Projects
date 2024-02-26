@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <link href="path_to_lightbox.css" rel="stylesheet">
+    <script src="path_to_lightbox.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <nav>
+            <ul>
+                <li onclick="project()"><a href="#profile" ></a> Projects</a></li>
+                <li onclick="aboutMe()"><a href="#about" ></a>About Me</a></li>
+                <li  onclick="contact()"> <a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            
+            <div id="filters">
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            </div>
+
+            <h2>Projects</h2>
+            <!-- Project 1 -->
+            <article data-category="web">
+                <h3>Project Title 1</h3>
+                <p>Description of Project 1.</p>
+                <a href="large_project1.jpg" data-lightbox="project-gallery" data-title="Project 1">
+                    <img src="project1.jpg" alt="Project 1 Screenshot">
+                </a>
+
+                <a href="project-url">Live Project</a>
+                <a href="code-repo-url">Code Repository</a>
+            </article>
+            <!-- Repeat for other projects -->
+        </section>
+        <section id="aboutMe" class="toggle-heading">
+            <h2>About Me</h2>
+            <p>Brief introduction about yourself.</p>
+        </section>
+        <section id="contact" class="toggle-heading">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
