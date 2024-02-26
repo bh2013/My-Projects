@@ -3,58 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <link href="path_to_lightbox.css" rel="stylesheet">
-    <script src="path_to_lightbox.js"></script>
-
+    <title>Portfolio Showcase</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="main-title">
+        <h1>My Portfolio</h1>
+    </div>
     <header>
-        <h1>My Projects</h1>
         <nav>
             <ul>
-                <li onclick="project()"><a href="#profile" ></a> Projects</a></li>
-                <li onclick="aboutMe()"><a href="#about" ></a>About Me</a></li>
-                <li  onclick="contact()"> <a href="#contact">Contact</a></li>
+                <li><a href="#" class="nav-link" data-target="about">About</a></li>
+                <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+                <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section id="projects">
-            
-            <div id="filters">
-                <button class="filter-btn" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web Development</button>
-                <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
-            </div>
-
+        <section id="profile" class="content-section">
+            <h2>Profile</h2>
+            <p>This is the profile section.</p>
+        </section>
+        <section id="about" class="content-section" style="display: none;">
+            <h2>About</h2>
+            <p>This is the about section.</p>
+        </section>
+        <section id="projects" class="content-section" style="display: none;">
             <h2>Projects</h2>
-            <!-- Project 1 -->
-            <article data-category="web">
-                <h3>Project Title 1</h3>
-                <p>Description of Project 1.</p>
-                <a href="large_project1.jpg" data-lightbox="project-gallery" data-title="Project 1">
-                    <img src="project1.jpg" alt="Project 1 Screenshot">
-                </a>
-
-                <a href="project-url">Live Project</a>
-                <a href="code-repo-url">Code Repository</a>
-            </article>
-            <!-- Repeat for other projects -->
+            <p>This is the projects section. Below are links to some of my projects on GitHub:</p>
+            <!-- Example Project Link -->
+            <div class="project-link">
+                <a href="https://github.com/yourusername/yourprojectname" target="_blank">Project Name</a>
+                <p>Short description of the project...</p>
+            </div>
+            <!-- Add more project links as needed -->
         </section>
-        <section id="aboutMe" class="toggle-heading">
-            <h2>About Me</h2>
-            <p>Brief introduction about yourself.</p>
-        </section>
-        <section id="contact" class="toggle-heading">
+        <section id="contact" class="content-section" style="display: none;">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            <p>This is the contact section.</p>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Your Name</p>
+        <p>&copy; Ben Harris</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
