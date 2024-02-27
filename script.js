@@ -17,3 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Remove 'active' class from all buttons
+            filterBtns.forEach(button => button.classList.remove('active'));
+            
+            // Add 'active' class to the clicked button
+            this.classList.add('active');
+
+            const filterValue = this.getAttribute('data-filter');
+            const projects = document.querySelectorAll('.project');
+
+            projects.forEach(project => {
+                if (filterValue === 'all') {
+                    project.style.display = 'block';
+                } else {
+                    if (project.getAttribute('data-category') === filterValue) {
+                        project.style.display = 'block';
+                    } else {
+                        project.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});

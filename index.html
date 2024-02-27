@@ -13,9 +13,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#" class="nav-link" data-target="about">About</a></li>
-                <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
-                <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+                <li><a class="nav-link" data-target="about">About</a></li>
+                <li><a class="nav-link" data-target="projects">Projects</a></li>
+                <li><a class="nav-link" data-target="contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -24,18 +24,32 @@
             <h2>Profile</h2>
             <p>This is the profile section.</p>
         </section>
+
+
         <section id="about" class="content-section" style="display: none;">
             <h2>About</h2>
             <p>This is the about section.</p>
         </section>
-        <section id="projects" class="content-section" style="display: none;">
+        <section id="projects" class="content-section" style="display: none;" >
             <h2>Projects</h2>
             <p>This is the projects section. Below are links to some of my projects on GitHub:</p>
+            <div class="filters" >
+                <button class="filter-btn" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="python">Python Projects</button>
+                <button class="filter-btn" data-filter="c">C++ Projects</button>
+                <button class="filter-btn" data-filter="web">Web Projects</button>
+                <button class="filter-btn" data-filter="java">Java Projects</button>
+            </div>
             <!-- Example Project Link -->
-            <div class="project-link">
+            <div class="project" data-category="python">
                 <a href="https://github.com/yourusername/yourprojectname" target="_blank">Project Name</a>
                 <p>Short description of the project...</p>
             </div>
+            <div class="project" data-category="python">
+                <a href="https://github.com/yourusername/yourprojectname" target="_blank">Project Name</a>
+                <p>Short description of the project...</p>
+            </div>
+
             <!-- Add more project links as needed -->
         </section>
         <section id="contact" class="content-section" style="display: none;">

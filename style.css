@@ -32,7 +32,7 @@ nav ul li {
 
 
 nav ul li a:hover {
-    background-color: grey;
+    font-style: underline;
     transition: background-color 0.3s ease;
 }
 
@@ -51,14 +51,14 @@ nav ul li a {
     display: block;
 }
 
-.project-link {
+.project {
     background-color: #e9ecef;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
 }
 
-.project-link a {
+.project a {
     font-weight: bold;
     color: #007bff;
 }
@@ -72,3 +72,31 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+.filters {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #333;
+    color: white;
+}
+
+.filter-btn:hover {
+    background-color: grey;
+}
+
+
+.filter-btn.active {
+    background-color: hotpink; /* Change this color as per your design */
+    color: white; /* Ensures text is visible on the new background */
+    border-color: #007bff; /* Optional: makes the border match the background */
+}
+
