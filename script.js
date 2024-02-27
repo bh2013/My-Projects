@@ -1,19 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Highlight the "About" section by default
+    document.querySelector('.nav-link[data-target="about"]').classList.add('active');
+
     navLinks.forEach(function(link) {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            document.querySelectorAll('.nav-link').forEach(function(nav) {
+                nav.classList.remove('active');
+            });
+            this.classList.add('active');
             const targetId = this.getAttribute('data-target');
-            const targetSection = document.getElementById(targetId);
-
-            // Hide all sections
             document.querySelectorAll('.content-section').forEach(function(section) {
                 section.style.display = 'none';
             });
-
-            // Show the targeted section only
-            targetSection.style.display = 'block';
+            document.getElementById(targetId).style.display = 'block';
         });
     });
 });

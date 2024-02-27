@@ -42,6 +42,20 @@ nav ul li a {
     text-decoration: none;
 }
 
+
+nav ul li a.active {
+    background-color: hotpink; /* Active link background color */
+    color: white; /* Active link text color */
+    border-radius: 5px; /* Optional: adds rounded corners */
+    padding: 10px; /* Adjust padding as needed */
+}
+
+.nav-link.active {
+    background-color: hotpink; /* Example background color */
+    color: white; /* Adapt based on your design */
+}
+
+
 .content-section {
     padding: 20px;
     display: none;
@@ -63,15 +77,16 @@ nav ul li a {
     color: #007bff;
 }
 
+
 footer {
+    /* Add your specific footer styles here */
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    position: relative;
-    bottom: 0;
     width: 100%;
 }
+
 
 
 .filters {
